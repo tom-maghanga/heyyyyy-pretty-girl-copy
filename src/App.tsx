@@ -1,7 +1,23 @@
 import { useState } from "react";
 import { useWindowSize } from "react-use";
 import Confetti from "react-confetti";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { LogSnag } from "@logsnag/node";
+
+const logsnag = new LogSnag({
+  token: "a3048c354f3ce1fc2f68f60a650c5aa5",
+  project: "heyyyyy-pretty-girl",
+});
+
+const track = async () => {
+  await logsnag.track({
+    channel: "yes",
+    event: "Valentine's Day",
+    description: "She said yes!",
+    icon: "💖",
+    notify: true,
+  });
+};
 
 function App() {
   const steps = [
@@ -110,14 +126,20 @@ hold your hands, and look into your pretty eyes.`,
         {currentStep === 6 && (
           <>
             <button
-              onClick={() => setSheWantsToBeMyValentine(true)}
+              onClick={async () => {
+                setSheWantsToBeMyValentine(true);
+                await track();
+              }}
               className="bg-white text-[#FFC5D3] py-3 text-xl rounded-xl w-full mt-10 font-semibold"
             >
               Yes
             </button>
 
             <button
-              onClick={() => setSheWantsToBeMyValentine(true)}
+              onClick={async () => {
+                setSheWantsToBeMyValentine(true);
+                await track();
+              }}
               className="bg-white text-[#FFC5D3] py-3 text-xl rounded-xl w-full mt-2 font-semibold"
             >
               Yes
