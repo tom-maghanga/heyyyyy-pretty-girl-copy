@@ -69,7 +69,7 @@ hold your hands, and look into your pretty eyes.`,
           </div>
         </motion.div>
       )}
-      <div className="bg-[#FFC5D3] min-h-screen text-white p-5 flex flex-col items-center justify-center">
+      <div className="bg-[#FFC5D3] min-h-screen text-white p-5 flex flex-col items-center justify-center max-w-md mx-auto">
         <motion.img
           key={currentStep}
           initial={{ opacity: 0, y: 20 }}
