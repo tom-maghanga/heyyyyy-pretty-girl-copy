@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useWindowSize } from "react-use";
 import Confetti from "react-confetti";
 import { motion } from "framer-motion";
@@ -58,6 +58,18 @@ hold your hands, and look into your pretty eyes.`,
   const [currentStep, setCurrentStep] = useState(0);
   const [sheWantsToBeMyValentine, setSheWantsToBeMyValentine] = useState(false);
   const { width, height } = useWindowSize();
+
+  useEffect(() => {
+    const imagePaths = [
+      ...steps.map((step) => step.image),
+      "/character/yayyyy.png",
+    ];
+
+    imagePaths.forEach((path) => {
+      const img = new Image();
+      img.src = path;
+    });
+  }, []);
 
   return (
     <>
