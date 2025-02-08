@@ -34,11 +34,11 @@ const steps = [
     image: "/character/three.png",
   },
   {
-    content: "Your beauty, your brilliant mind, your playful spirit... every moment with you feels like it passes too quickly.",
+    content: "Your beauty, your brilliant mind, your innocence... every moment with you feels like it passes too quickly.",
     image: "/character/four.png",
   },
   {
-    content: "I count down the minutes until I can see you again, hold your hands tight, and get lost in those pretty eyes of yours.",
+    content: "I count down the minutes until I can see you again, hug you tight, and get lost in those pretty eyes of yours.",
     image: "/character/five.png",
   },
   {
