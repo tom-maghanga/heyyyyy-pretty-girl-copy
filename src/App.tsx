@@ -20,33 +20,36 @@ const track = async () => {
 };
 
 function App() {
-  const steps = [
-    {
-      content: "Heyyyyy, pretty girl.",
-      image: "/character/one.png",
-    },
-    {
-      content: `Recently, we met.
-      And somehow, you've been on my mind ever since.
-      `,
-      image: "/character/two.png",
-    },
-    {
-      content: `Then we went on our first date…And I realized—yep, I want this girl. For life.
-      `,
-      image: "/character/three.png",
-    },
-    {
-      content: `You're beautiful, you're smart, you're fun,
-and you make spending time together feel too short.`,
-      image: "/character/four.png",
-    },
-    {
-      content: `I look forward to when I'll see you again,
-hold your hands, and look into your pretty eyes.`,
-      image: "/character/five.png",
-    },
-    {
+const steps = [
+  {
+    content: "Happy Birthday to my precious Lynn! 🎂",
+    image: "/character/one.png",
+  },
+  {
+    content: "From the day we met, you've captured my heart completely, and my thoughts are filled with you every single day.",
+    image: "/character/two.png",
+  },
+  {
+    content: "That magical first date we shared... it became crystal clear - you're the one I want to cherish forever.",
+    image: "/character/three.png",
+  },
+  {
+    content: "Your beauty, your brilliant mind, your playful spirit... every moment with you feels like it passes too quickly.",
+    image: "/character/four.png",
+  },
+  {
+    content: "I count down the minutes until I can see you again, hold your hands tight, and get lost in those pretty eyes of yours.",
+    image: "/character/five.png",
+  },
+  {
+    content: "Today is all about celebrating someone incredibly special...",
+    image: "/character/six.png",
+  },
+  {
+    content: "Happy Birthday, my beloved Lynnette! 🎉❤️",
+    image: "/character/seven.png",
+  },
+  {
       content: "So now I've got a question for you…",
       image: "/character/six.png",
     },
@@ -54,7 +57,7 @@ hold your hands, and look into your pretty eyes.`,
       content: "Will you be my Valentine?",
       image: "/character/seven.png",
     },
-  ];
+];
   const [currentStep, setCurrentStep] = useState(0);
   const [sheWantsToBeMyValentine, setSheWantsToBeMyValentine] = useState(false);
   const { width, height } = useWindowSize();
